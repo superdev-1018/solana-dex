@@ -77,7 +77,7 @@ export default function Liquidity() {
   return (
     <LiquidityUIContextProvider>
       <LiquidityEffect />
-      <PageLayout mobileBarTitle="Liquidity" metaTitle="Liquidity - Raydium">
+      <PageLayout mobileBarTitle="Solana-Dex" metaTitle="Solana-Dex">
         <LiquidityPageHead />
         <LiquidityCard />
         <UserLiquidityExhibition />

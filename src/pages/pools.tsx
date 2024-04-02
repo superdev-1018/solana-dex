@@ -70,7 +70,7 @@ export default function PoolsPage() {
   usePoolTimeBasisLoader()
 
   return (
-    <PageLayout contentButtonPaddingShorter mobileBarTitle="Pools" metaTitle="Pools - Raydium">
+    <PageLayout contentButtonPaddingShorter mobileBarTitle="Solana-Dex" metaTitle="Solana-Dex">
       <PoolHeader />
       <PoolCard />
     </PageLayout>

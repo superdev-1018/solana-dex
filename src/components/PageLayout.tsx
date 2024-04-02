@@ -605,15 +605,15 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
       >
         {isMobile && (
           <Row className="items-center justify-between p-6 mobile:p-4 mobile:pl-8">
-            <Link href="/">
+            {/* <Link href="/">
               <Image src="/logo/logo-with-text.svg" className={`mobile:scale-75 ${inDev ? 'hue-rotate-60' : ''}`} />
-            </Link>
-            <Icon
+            </Link> */}
+            {/* <Icon
               size={isMobile ? 'sm' : 'md'}
               heroIconName="x"
               className="text-[rgba(57,208,216,0.8)] clickable clickable-mask-offset-2"
               onClick={onClickCloseBtn}
-            />
+            /> */}
           </Row>
         )}
         <Col className="grid grid-rows-[2fr,1fr,auto] flex-1 overflow-hidden">

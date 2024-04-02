@@ -90,7 +90,7 @@ export default function Swap() {
   return (
     <SwapUIContextProvider>
       <SwapEffect />
-      <PageLayout mobileBarTitle="Swap" metaTitle="Swap - Raydium">
+      <PageLayout mobileBarTitle="Solana-Dex" metaTitle="Solana-Dex">
         <SwapHead />
         <SwapCard />
         {/* <UnwrapWSOL /> */}

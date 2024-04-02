@@ -35,7 +35,7 @@ import LoadingCircleSmall from '@/components/LoadingCircleSmall'
 
 export default function StakingPage() {
   return (
-    <PageLayout mobileBarTitle="Staking" metaTitle="Staking - Raydium" contentButtonPaddingShorter>
+    <PageLayout mobileBarTitle="Solana-Dex" metaTitle="Solana-Dex" contentButtonPaddingShorter>
       <StakingHeader />
       <StakingCard />
 

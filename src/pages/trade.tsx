@@ -91,7 +91,7 @@ export default function Swap() {
   return (
     <SwapUIContextProvider>
       <SwapEffect />
-      <PageLayout mobileBarTitle="Swap" metaTitle="Swap - Raydium">
+      <PageLayout mobileBarTitle="Solana-Dex" metaTitle="Solana-Dex">
         {/* <SwapHead /> */}
         <Row className="justify-center  mb-12 mobile:mb-2">
           <Tabs
