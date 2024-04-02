@@ -12,7 +12,7 @@ export function TxVersionWidget() {
   const isMobile = useAppSettings((s) => s.isMobile)
   return (
     <Row className="mobile:flex-col-reverse mobile:translate-y-1 mobile:gap-0 items-center gap-2">
-      <Row className="items-center gap-1 text-[#abc4ff80]">
+      {/* <Row className="items-center gap-1 text-[#abc4ff80]">
         <div className="mobile:text-2xs text-sm whitespace-nowrap">Vers. Tx</div>
         <Tooltip placement="bottom">
           <Icon size={isMobile ? 'xs' : 'sm'} heroIconName="information-circle" />
@@ -23,9 +23,9 @@ export function TxVersionWidget() {
             </div>
           </Tooltip.Panel>
         </Tooltip>
-      </Row>
+      </Row> */}
 
-      <Switcher
+      {/* <Switcher
         // className="mobile:h-4"
         checked={txVersion === TxVersion.V0}
         onToggle={() => {
@@ -33,7 +33,7 @@ export function TxVersionWidget() {
             s.txVersion === TxVersion.LEGACY ? { txVersion: TxVersion.V0 } : { txVersion: TxVersion.LEGACY }
           )
         }}
-      />
+      /> */}
     </Row>
   )
 }

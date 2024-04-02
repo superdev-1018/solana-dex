@@ -23,6 +23,13 @@ import { SplToken } from './token/type'
 import useWallet from './wallet/useWallet'
 
 export type PageRouteConfigs = {
+  '/trade': {
+    queryProps?: {
+      coin1?: SplToken
+      coin2?: SplToken
+      ammId?: HexAddress
+    }
+  }
   '/swap': {
     queryProps?: {
       coin1?: SplToken
@@ -197,6 +204,24 @@ export function routeTo<ToPage extends keyof PageRouteConfigs>(
         }))
       }
     })
+  } else if (toPage === '/trade') {
+    const { coin1: oldCoin1, coin2: oldCoin2 } = useSwap.getState()
+    const coin1 =
+      options?.queryProps?.coin1 ??
+      (router.pathname.includes('/liquidity/add') ? useLiquidity.getState().coin1 : undefined)
+    const coin2 =
+      options?.queryProps?.coin2 ??
+      (router.pathname.includes('/liquidity/add') ? useLiquidity.getState().coin2 : undefined)
+    const isSwapDirectionReversed = useSwap.getState().directionReversed
+
+    useSwap.setState(objectShakeFalsy(isSwapDirectionReversed ? { coin2: coin1, coin1: coin2 } : { coin1, coin2 }))
+
+    // reset token amount
+    if (!areEqualToken(oldCoin1, coin1) || !areEqualToken(oldCoin2, coin2)) {
+      useSwap.setState({ coin1Amount: undefined, coin2Amount: undefined })
+    }
+
+    router.push({ pathname: '/trade' }) 
   } else if (toPage === '/acceleraytor/detail') {
     return router
       .push({
