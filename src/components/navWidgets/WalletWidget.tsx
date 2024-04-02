@@ -102,7 +102,7 @@ export default function WalletWidget() {
         </Button>
       ) : (
         <Button
-          className="frosted-glass frosted-glass-teal"
+          className="frosted-glass frosted-white"
           onClick={() => {
             if (!publicKey) useAppSettings.setState({ isWalletSelectorShown: true })
           }}
@@ -117,7 +117,7 @@ export default function WalletWidget() {
           ) : (
             <Row className="items-center gap-3 my-0.5">
               <Icon size="sm" iconSrc="/icons/msic-wallet.svg" />
-              <div className="text-sm font-medium text-[#39D0D8]">
+              <div className="text-sm font-medium text-[#e4f7f7]">
                 {connecting ? 'Connecting...' : 'Connect Wallet'}
               </div>
             </Row>

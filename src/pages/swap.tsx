@@ -94,7 +94,7 @@ export default function Swap() {
         <SwapHead />
         <SwapCard />
         {/* <UnwrapWSOL /> */}
-        <KLineChart />
+        {/* <KLineChart /> */}
       </PageLayout>
     </SwapUIContextProvider>
   )
@@ -381,7 +381,7 @@ function SwapCard() {
   return (
     <CyberpunkStyleCard
       domRef={cardRef}
-      wrapperClassName="w-[min(456px,100%)] self-center cyberpunk-bg-light"
+      wrapperClassName="w-[min(456px,100%)] self-center"
       className="py-8 pt-4 px-6 mobile:py-5 mobile:px-3"
     >
       {/* input twin */}
@@ -1551,7 +1551,7 @@ function KLineChartItemThumbnail({
 //               size="lg"
 //               style={{
 //                 background:
-//                   'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)'
+//                   'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(15, 15, 17, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)'
 //               }}
 //             >
 //               <Row className="gap-4 items-center">

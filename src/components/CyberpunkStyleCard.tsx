@@ -29,20 +29,20 @@ export default function CyberpunkStyleCard({
   return (
     <div
       ref={domRef as any}
-      className={wrapperClassName}
+      className={`${wrapperClassName}`}
       style={{
         //@ts-expect-error css variable
         ['--gradient-rotate']: cssGradientRotate != null ? `${cssGradientRotate}deg` : undefined,
         minHeight: haveMinHeight ? '300px' : undefined, // or style will be freak
-        borderRadius: borderRoundSize,
-        padding: cyberpunkBoarderWidth,
-        backgroundImage: 'linear-gradient(var(--gradient-rotate, 246deg), #da2eef 7.97%, #2b6aff 49.17%, #39d0d8 92.1%)'
+        borderRadius: '0px',
+        padding: cyberpunkBoarderWidth
+        // backgroundImage: 'linear-gradient(var(--gradient-rotate, 246deg), #da2eef 7.97%, #2b6aff 49.17%, #39d0d8 92.1%)'
       }}
     >
       <Card
         {...restProps}
         size={size}
-        className={twMerge('bg-cyberpunk-card-bg overflow-hidden', restProps.className)}
+        className={twMerge('bg-[#000000] overflow-hidden rounded-[8px]', restProps.className)}
         style={{
           height: '100%',
           width: '100%'

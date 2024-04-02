@@ -124,12 +124,12 @@ export default function PageLayout(props: {
       ) : (
         <>
           <Navbar className="grid-area-a" />
-          <SideMenu className="flex-container grid-area-b mobile:hidden" />
+          {/* <SideMenu className="flex-container grid-area-b mobile:hidden" /> */}
         </>
       )}
       <main
         // always occupy scrollbar space
-        className="flex flex-col PageLayoutContent relative grid-area-c bg-gradient-to-b from-[#0c0927] to-[#110d36] rounded-tl-3xl mobile:rounded-none"
+        className="flex flex-col PageLayoutContent relative grid-area-c bg-gradient-to-b from-[#92ADB1] to-[#110d12] mobile:rounded-none"
         style={{
           overflowX: 'hidden',
           overflowY: 'scroll'
@@ -234,11 +234,11 @@ function VersionTooOldDialog() {
         <Card
           className={twMerge(`p-8 rounded-3xl w-[min(480px,95vw)] mx-8 border-1.5 border-[rgba(171,196,255,0.2)]`)}
           size="lg"
-          style={{
-            background:
-              'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)',
-            boxShadow: '0px 8px 48px rgba(171, 196, 255, 0.12)'
-          }}
+          // style={{
+          //   background:
+          //     'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 89, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)',
+          //   boxShadow: '0px 8px 48px rgba(171, 196, 255, 0.12)'
+          // }}
         >
           <Col className="items-center">
             <div className="font-semibold text-xl text-[#D8CB39] mb-3 text-center">New version available</div>
@@ -282,11 +282,11 @@ function DisclaimerDialog() {
           `flex flex-col p-8 mobile:p-5 rounded-3xl mobile:rounded-b-none mobile:h-[80vh] w-[min(552px,100vw)] mobile:w-full border-1.5 border-[rgba(171,196,255,0.2)]`
         )}
         size="lg"
-        style={{
-          background:
-            'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)',
-          boxShadow: '0px 8px 48px rgba(171, 196, 255, 0.12)'
-        }}
+        // style={{
+        //   background:
+        //     'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 89, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)',
+        //   boxShadow: '0px 8px 48px rgba(171, 196, 255, 0.12)'
+        // }}
       >
         {/* title */}
         <div className="text-xl font-semibold text-white">Disclaimer</div>
@@ -430,18 +430,52 @@ function Navbar({
   // TODO: move it into useAppSetting()
   onOpenMenu?: () => void
 }) {
+  const { pathname } = useRouter()
+
   const isMobile = useAppSettings((s) => s.isMobile)
   const inDev = useAppSettings((s) => s.inDev) // show dev logo
 
   const pcNavContent = (
-    <Row className="justify-between items-center mobile:h-14 mobile:bg-cyberpunk-card-bg">
-      <Link href="/" className="text-white">
-        {/* <Image
+    <Row className="flex items-center justify-between mobile:h-14 ">
+      <div className="flex items-center gap-3">
+        <Link href="/" className="text-white mr-8">
+          {/* <Image
           className={`cursor-pointer ${inDev ? 'hue-rotate-60' : ''} mobile:hidden`}
           src="/logo/logo-with-text.svg"
         /> */}
-        Solana-Dex
-      </Link>
+          Solana-Dex
+        </Link>
+        <LinkItem icon="/icons/entry-icon-staking.svg" href="/staking" isCurrentRoutePath={pathname === '/staking'}>
+          Staking
+        </LinkItem>
+        <LinkItem icon="/icons/entry-icon-swap.svg" href="/swap" isCurrentRoutePath={pathname === '/swap'}>
+          Swap
+        </LinkItem>
+        <LinkItem
+          icon="/icons/entry-icon-liquidity.svg"
+          href="/liquidity/add"
+          isCurrentRoutePath={pathname === '/liquidity/add'}
+        >
+          Liquidity
+        </LinkItem>
+        <LinkItem icon="/icons/entry-icon-pools.svg" href="/pools" isCurrentRoutePath={pathname === '/pools'}>
+          Pools
+        </LinkItem>
+        <LinkItem
+          icon="/icons/entry-icon-concentrated-pools.svg"
+          href="/basicTrade"
+          isCurrentRoutePath={pathname === '/basicTrade'}
+        >
+          Basic Trading
+        </LinkItem>
+        <LinkItem
+          icon="/icons/entry-icon-concentrated-pools.svg"
+          href="/advancedTrade"
+          isCurrentRoutePath={pathname === '/advancedTrade'}
+        >
+          Advanced Trading
+        </LinkItem>
+      </div>
 
       <Row className="gap-6 items-center mobile:hidden">
         <MessageBoardWidget />
@@ -451,7 +485,7 @@ function Navbar({
     </Row>
   )
   const mobileNavContent = (
-    <Grid className="grid-cols-[1fr,2fr,1fr] gap-2 mobile:px-5 mobile:py-3   items-center bg-cyberpunk-card-bg cyberpunk-bg-light">
+    <Grid className="grid-cols-[1fr,2fr,1fr] gap-2 mobile:px-5 mobile:py-3   items-center bg-cyberpunk-card-bg ">
       <div className="frosted-glass-teal rounded-lg p-2 clickable justify-self-start" onClick={onOpenMenu}>
         <Icon className="w-4 h-4" iconClassName="w-4 h-4" iconSrc="/icons/msic-menu.svg" />
       </div>
@@ -643,10 +677,10 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
             </LinkItem>
             <LinkItem
               icon="/icons/entry-icon-concentrated-pools.svg"
-              href="/trade"
-              isCurrentRoutePath={pathname === '/trade'}
+              href="/basicTrade"
+              isCurrentRoutePath={pathname === '/basicTrade'}
             >
-              Basic Trade
+              Basic Trading
             </LinkItem>
             {/* <LinkItem icon="/icons/entry-icon-farms.svg" href="/farms" isCurrentRoutePath={pathname === '/farms'}>
               Farms
@@ -731,12 +765,12 @@ function LinkItem({
       }`}
     >
       <Row className="items-center">
-        <div className="grid bg-gradient-to-br from-[rgba(57,208,216,0.2)] to-[rgba(57,208,216,0)] rounded-lg p-1.5 mr-3">
+        {/* <div className="grid bg-gradient-to-br from-[rgba(57,208,216,0.2)] to-[rgba(57,208,216,0)] rounded-lg p-1.5 mr-3">
           <Icon size={isMobile ? 'xs' : 'sm'} iconSrc={icon} />
-        </div>
+        </div> */}
         <Row
           className={`grow items-center justify-between text-[#ACE3E5] ${
-            isCurrentRoutePath ? 'text-[rgba(57,208,216,1)]' : ''
+            isCurrentRoutePath ? 'text-[rgba(200, 200, 200, 1)]' : ''
           } text-sm mobile:text-[0.85rem] font-medium`}
         >
           <div>{children}</div>
@@ -963,7 +997,7 @@ function RpcConnectionFace() {
           )}
         </div>
         <span
-          className="text-[rgba(172,227,229)] text-sm mobile:text-xs font-medium flex-grow overflow-ellipsis overflow-hidden"
+          className="text-[#e4f7f7] text-sm mobile:text-xs font-medium flex-grow overflow-ellipsis overflow-hidden"
           title={currentEndPoint?.url}
         >
           {currentEndPoint

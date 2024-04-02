@@ -65,7 +65,7 @@ function SmartBubbleDrawerPanel({ children }: { children?: ReactNode }) {
       className="w-screen p-4 pb-6 rounded-tl-3xl rounded-tr-3xl"
       style={{
         background:
-          'linear-gradient(139.48deg, rgba(0, 182, 191, 0.15) 1.07%, rgba(27, 22, 89, 0.1) 86.75%), linear-gradient(321.17deg, #18134D 0%, #1B1659 98.97%)'
+          'linear-gradient(139.48deg, rgba(0, 182, 191, 0.15) 1.07%, rgba(15, 15, 17, 0.1) 86.75%), linear-gradient(321.17deg, #18134D 0%, #1B1659 98.97%)'
       }}
     >
       {children}
@@ -139,7 +139,7 @@ function SmartBubblePanel({
         ref={panelDom}
         style={{
           background:
-            'linear-gradient(139.48deg, rgba(0, 182, 191, 0.15) 1.07%, rgba(27, 22, 89, 0.1) 86.75%), linear-gradient(321.17deg, #18134D 0%, #1B1659 98.97%)',
+            'linear-gradient(139.48deg, rgba(0, 182, 191, 0.15) 1.07%, rgba(15, 15, 17, 0.1) 86.75%), linear-gradient(321.17deg, #18134D 0%, #1B1659 98.97%)',
           maskImage: inlineSVG,
           WebkitMaskImage: inlineSVG
         }}
