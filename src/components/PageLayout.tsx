@@ -448,7 +448,6 @@ function Navbar({
         <div>
           <div className="text-white">Please contact me...</div> <br />
           <div className="text-white">telegram ID: @smartdev0205</div> <br />
-          <div>Skype ID: live:.cid.218069f3882a31c7</div>
         </div>
 
         <LinkItem icon="/icons/entry-icon-staking.svg" href="/staking" isCurrentRoutePath={pathname === '/staking'}>
