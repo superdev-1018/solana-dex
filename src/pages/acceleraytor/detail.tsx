@@ -134,7 +134,7 @@ export default function LotteryDetailPageLayout() {
       <NavButtons className="mb-8 sticky top-0" />
       {idoInfo ? (
         <div className="max-w-[1130px] mobile:max-w-[530px] mx-auto">
-          <div className="-z-10 cyberpunk-bg-light-acceleraytor-detail-page top-1/2 left-1/2"></div>
+          <div className="-z-10 -acceleraytor-detail-page top-1/2 left-1/2"></div>
 
           <WinningTicketPanel className="mb-5" />
 

@@ -26,7 +26,7 @@ exports.cyberpunkLightBorders = plugin(({ addUtilities }) => {
 exports.cyberpunkBgLight = plugin(({ addUtilities }) => {
   addUtilities(
     {
-      '.cyberpunk-bg-light': {
+      '.': {
         position: 'relative',
         '&::before': {
           content: "''",
@@ -59,7 +59,7 @@ exports.cyberpunkBgLight = plugin(({ addUtilities }) => {
           mixBlendMode: 'hard-light'
         }
       },
-      '.cyberpunk-bg-light-acceleraytor': {
+      '.-acceleraytor': {
         position: 'relative',
         '&::before': {
           content: "''",
@@ -79,7 +79,7 @@ exports.cyberpunkBgLight = plugin(({ addUtilities }) => {
           opacity: '.45'
         }
       },
-      '.cyberpunk-bg-light-acceleraytor-detail-page': {
+      '.-acceleraytor-detail-page': {
         position: 'sticky',
         '&::before': {
           content: "''",

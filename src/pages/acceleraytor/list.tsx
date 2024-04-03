@@ -55,7 +55,7 @@ export default function AcceleRaytor() {
 function AcceleRaytorHeaderCyberpunk() {
   return (
     <Col className="items-center gap-20 mb-11">
-      <Col className="items-center cyberpunk-bg-light-acceleraytor mobile:scale-75 mobile:translate-y-4">
+      <Col className="items-center -acceleraytor mobile:scale-75 mobile:translate-y-4">
         <Image src="/logo/accecleraytor-text-logo.svg" />
         <div className="text-[20px] mt-2 font-medium text-[#ABC4FF80] whitespace-nowrap">
           A launchpad for new Solana projects

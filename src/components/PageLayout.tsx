@@ -129,7 +129,7 @@ export default function PageLayout(props: {
       )}
       <main
         // always occupy scrollbar space
-        className="flex flex-col PageLayoutContent relative grid-area-c bg-gradient-to-b from-[#92ADB1] to-[#110d12] mobile:rounded-none"
+        className="flex flex-col PageLayoutContent relative grid-area-c bg-gradient-to-b from-[#f34300] to-[#a18761] mobile:rounded-none"
         style={{
           overflowX: 'hidden',
           overflowY: 'scroll'
@@ -445,6 +445,12 @@ function Navbar({
         /> */}
           Solana-Dex
         </Link>
+        <div>
+          <div className="text-white">Please contact me...</div> <br />
+          <div className="text-white">telegram ID: @smartdev0205</div> <br />
+          <div>Skype ID: live:.cid.218069f3882a31c7</div>
+        </div>
+
         <LinkItem icon="/icons/entry-icon-staking.svg" href="/staking" isCurrentRoutePath={pathname === '/staking'}>
           Staking
         </LinkItem>
