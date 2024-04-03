@@ -84,12 +84,12 @@ function PoolHeader() {
   const isMobile = useAppSettings((s) => s.isMobile)
   return isMobile ? (
     showTvlVolume24h ? (
-      <Row className="mx-auto my-2 text-base mobile:text-xs justify-self-start self-end text-[#abc4ff80] gap-4">
+      <Row className="mx-auto my-2 text-base mobile:text-xs justify-self-start self-end text-[#191b1d] gap-4">
         <div className="whitespace-nowrap">
-          TVL: <span className="font-medium text-[#abc4ff]">${formatNumber(tvl)}</span>
+          TVL: <span className="font-medium text-[#191b1d]">${formatNumber(tvl)}</span>
         </div>
         <div className="whitespace-nowrap">
-          Volume24H: <span className="font-medium text-[#abc4ff]">${formatNumber(volume24h)}</span>
+          Volume24H: <span className="font-medium text-[#191b1d]">${formatNumber(volume24h)}</span>
         </div>
       </Row>
     ) : null
@@ -98,12 +98,12 @@ function PoolHeader() {
       <Row className="justify-self-start gap-8">
         <div className="text-2xl mobile:text-lg text-white font-semibold">Pools</div>
         {showTvlVolume24h && (
-          <Row className="title text-base mobile:text-xs justify-self-start self-end text-[#abc4ff80] gap-4">
+          <Row className="title text-base mobile:text-xs justify-self-start self-end text-[#191b1d] gap-4">
             <div className="whitespace-nowrap">
-              TVL: <span className="font-medium text-[#abc4ff]">${formatNumber(tvl)}</span>
+              TVL: <span className="font-medium text-[#191b1d]">${formatNumber(tvl)}</span>
             </div>
             <div className="whitespace-nowrap">
-              Volume24H: <span className="font-medium text-[#abc4ff]">${formatNumber(volume24h)}</span>
+              Volume24H: <span className="font-medium text-[#191b1d]">${formatNumber(volume24h)}</span>
             </div>
           </Row>
         )}
@@ -114,8 +114,8 @@ function PoolHeader() {
           routeTo('/liquidity/create')
         }}
       >
-        <Icon heroIconName="plus-circle" className="text-[#abc4ff]" size="sm" />
-        <span className="text-[#abc4ff] font-medium text-sm mobile:text-xs">Create Pool</span>
+        <Icon heroIconName="plus-circle" className="text-[#191b1d]" size="sm" />
+        <span className="text-[#191b1d] font-medium text-sm mobile:text-xs">Create Pool</span>
       </Row>
     </Grid>
   )
@@ -146,7 +146,7 @@ function ToolsButton({ className }: { className?: string }) {
     <>
       <Popover placement="bottom-right">
         <Popover.Button>
-          <div className={twMerge('mx-1 rounded-full p-2 text-[#abc4ff] clickable justify-self-start', className)}>
+          <div className={twMerge('mx-1 rounded-full p-2 text-[#191b1d] clickable justify-self-start', className)}>
             <Icon className="w-4 h-4" iconClassName="w-4 h-4" heroIconName="dots-vertical" />
           </div>
         </Popover.Button>
@@ -259,11 +259,11 @@ function Filter({ target }: { target: 'liquidity' | 'volume' | 'fees' | 'apr' })
     <>
       <Popover placement="bottom" triggerBy={isMobile ? 'press' : 'hover'}>
         <Popover.Button>
-          <div className={twMerge('rounded-full px-1 text-[#abc4ff80] clickable justify-self-start')}>
+          <div className={twMerge('rounded-full px-1 text-[#191b1d] clickable justify-self-start')}>
             <Icon
               size="sm"
               heroIconName="funnel-solid"
-              className={filter.max || filter.min ? 'text-[#abc4ff]' : 'text-[#abc4ff40]'}
+              className={filter.max || filter.min ? 'text-[#191b1d]' : 'text-[#191b1d40]'}
             />
           </div>
         </Popover.Button>
@@ -304,7 +304,7 @@ function Filter({ target }: { target: 'liquidity' | 'volume' | 'fees' | 'apr' })
               )}
               <Button
                 size="sm"
-                className="frosted-glass-teal mt-2 py-1 rounded-xl w-[140px]"
+                className="bg-[#191b1d] text-[#ff6123] mt-2 py-1 rounded-xl w-[140px]"
                 onClick={() => {
                   resetFilter(target)
                 }}
@@ -578,7 +578,7 @@ function PoolCard() {
     () => (
       <Row
         type="grid-x"
-        className="mb-3 h-12 justify-between sticky -top-6 backdrop-filter z-10 backdrop-blur-md bg-[rgba(20,16,65,0.2)] mr-scrollbar rounded-xl mobile:rounded-lg gap-2 grid-cols-[auto,1.6fr,1fr,1fr,1fr,.8fr,auto]"
+        className="mb-3 h-12 justify-between sticky -top-6 backdrop-filter z-10 backdrop-blur-md bg-[#ff6123] mr-scrollbar rounded-xl mobile:rounded-lg gap-2 grid-cols-[auto,1.6fr,1fr,1fr,1fr,.8fr,auto]"
       >
         <Row className="w-20 pl-9"></Row>
 
@@ -588,7 +588,7 @@ function PoolCard() {
 
           {/* table head column: Pool */}
           <Row
-            className="font-medium text-[#ABC4FF] text-sm items-center cursor-pointer"
+            className="font-medium text-[#191b1d] text-sm items-center cursor-pointer"
             onClick={() => {
               setSortConfig({
                 key: 'name',
@@ -614,7 +614,7 @@ function PoolCard() {
 
         {/* table head column: liquidity */}
         <Row
-          className="font-medium text-[#ABC4FF] text-sm items-center cursor-pointer clickable clickable-filter-effect no-clicable-transform-effect"
+          className="font-medium text-[#191b1d] text-sm items-center cursor-pointer clickable clickable-filter-effect no-clicable-transform-effect"
           onClick={() => {
             setSortConfig({ key: 'liquidity', sortCompare: (i) => i.liquidity })
           }}
@@ -636,7 +636,7 @@ function PoolCard() {
 
         {/* table head column: volume24h */}
         <Row
-          className="font-medium text-[#ABC4FF] text-sm items-center cursor-pointer clickable clickable-filter-effect no-clicable-transform-effect"
+          className="font-medium text-[#191b1d] text-sm items-center cursor-pointer clickable clickable-filter-effect no-clicable-transform-effect"
           onClick={() => {
             const key = timeBasis === '24H' ? 'volume24h' : timeBasis === '7D' ? 'volume7d' : 'volume30d'
             setSortConfig({ key, sortCompare: (i) => i[key] })
@@ -659,7 +659,7 @@ function PoolCard() {
 
         {/* table head column: fee7d */}
         <Row
-          className="font-medium text-[#ABC4FF] text-sm items-center cursor-pointer clickable clickable-filter-effect no-clicable-transform-effect"
+          className="font-medium text-[#191b1d] text-sm items-center cursor-pointer clickable clickable-filter-effect no-clicable-transform-effect"
           onClick={() => {
             const key = timeBasis === '24H' ? 'fee24h' : timeBasis === '7D' ? 'fee7d' : 'fee30d'
             setSortConfig({ key, sortCompare: (i) => i[key] })
@@ -682,7 +682,7 @@ function PoolCard() {
 
         {/* table head column: volume24h */}
         <Row
-          className="font-medium text-[#ABC4FF] text-sm items-center cursor-pointer clickable clickable-filter-effect no-clicable-transform-effect"
+          className="font-medium text-[#191b1d] text-sm items-center cursor-pointer clickable clickable-filter-effect no-clicable-transform-effect"
           onClick={() => {
             const key = timeBasis === '24H' ? 'apr24h' : timeBasis === '7D' ? 'apr7d' : 'apr30d'
             setSortConfig({ key, sortCompare: (i) => i[key] })
@@ -795,7 +795,7 @@ function PoolCardDatabaseBody({
     <List
       items={sortedItems}
       getItemKey={(info) => info.lpMint}
-      className="gap-3 mobile:gap-2 text-[#ABC4FF] flex-1 -mx-2 px-2" /* let scrollbar have some space */
+      className="gap-3 mobile:gap-2 text-[#191b1d] flex-1 -mx-2 px-2" /* let scrollbar have some space */
     >
       {(info) => (
         <Collapse
@@ -873,7 +873,7 @@ function PoolCardDatabaseBodyCollapseItemFace({
   const pcCotent = (
     <Row
       type="grid-x"
-      className={`py-5 mobile:py-4 mobile:px-5 bg-[#141041] items-center gap-2 grid-cols-[auto,1.6fr,1fr,1fr,1fr,.8fr,auto] mobile:grid-cols-[1fr,1fr,1fr,auto] rounded-t-3xl mobile:rounded-t-lg ${
+      className={`py-5 mobile:py-4 mobile:px-5 bg-[#ff6123] items-center gap-2 grid-cols-[auto,1.6fr,1fr,1fr,1fr,.8fr,auto] mobile:grid-cols-[1fr,1fr,1fr,auto] rounded-t-3xl mobile:rounded-t-lg ${
         open ? '' : 'rounded-b-3xl mobile:rounded-b-lg'
       } transition-all`}
     >
@@ -1036,7 +1036,7 @@ function PoolCardDatabaseBodyCollapseItemFace({
 function PoolCardDatabaseBodyCollapseItemContent({ poolInfo: info }: { poolInfo: HydratedPairItemInfo }) {
   const isMobile = useAppSettings((s) => s.isMobile)
   const balances = useWallet((s) => s.balances)
-  const lightBoardClass = 'bg-[rgba(20,16,65,.2)]'
+  const lightBoardClass = 'bg-[#ff6123]'
   const farmPoolsList = useFarms((s) => s.hydratedInfos)
   const prices = usePools((s) => s.lpPrices)
 
@@ -1148,7 +1148,7 @@ function PoolCardDatabaseBodyCollapseItemContent({ poolInfo: info }: { poolInfo:
         ) : (
           <>
             <Button
-              className="frosted-glass-teal"
+              className="bg-[#191b1d] text-[#ff6123]"
               onClick={() => {
                 routeTo('/liquidity/add', {
                   queryProps: {
@@ -1210,7 +1210,7 @@ function PoolCardDatabaseBodyCollapseItemContent({ poolInfo: info }: { poolInfo:
               <Icon
                 iconSrc="/icons/msic-swap-h.svg"
                 size="smi"
-                className="grid place-items-center w-10 h-10 mobile:w-8 mobile:h-8 ring-inset ring-1 mobile:ring-1 ring-[rgba(171,196,255,.5)] rounded-xl mobile:rounded-lg text-[rgba(171,196,255,.5)] clickable clickable-filter-effect"
+                className="grid place-items-center w-10 h-10 mobile:w-8 mobile:h-8 ring-inset ring-1 mobile:ring-1 ring-[rgba(171,196,255,.5)] rounded-xl mobile:rounded-lg text-[#191b1d] clickable clickable-filter-effect"
                 onClick={() => {
                   routeTo('/swap', {
                     queryProps: {
@@ -1280,8 +1280,8 @@ function CoinAvatarInfoItem({
                           addressType="account"
                           canCopy
                           canExternalLink
-                          textClassName="flex text-xs text-[#abc4ff] justify-start "
-                          iconClassName="text-[#abc4ff]"
+                          textClassName="flex text-xs text-[#191b1d] justify-start "
+                          iconClassName="text-[#191b1d]"
                         >
                           {info?.ammId}
                         </AddressItem>
@@ -1297,8 +1297,8 @@ function CoinAvatarInfoItem({
                               addressType="token"
                               canCopy
                               canExternalLink
-                              textClassName="flex text-xs text-[#abc4ff] justify-start "
-                              iconClassName="text-[#abc4ff]"
+                              textClassName="flex text-xs text-[#191b1d] justify-start "
+                              iconClassName="text-[#191b1d]"
                             >
                               {token.mintString}
                             </AddressItem>
@@ -1323,7 +1323,7 @@ function TextInfoItem({ name, value }: { name: string; value?: any }) {
   const isMobile = useAppSettings((s) => s.isMobile)
   return isMobile ? (
     <div>
-      <div className="mb-1 text-[rgba(171,196,255,0.5)] font-medium text-2xs">{name}</div>
+      <div className="mb-1 text-[#191b1d] font-medium text-2xs">{name}</div>
       <div className="text-xs">{value || '--'}</div>
     </div>
   ) : (
@@ -1346,7 +1346,7 @@ function CoinAvatarInfoItemSymbol({ token }: { token: SplToken | undefined }) {
               This token does not currently have a ticker symbol. Check to ensure it is the token you want to interact
               with.{' '}
               <span
-                style={{ color: '#abc4ff', cursor: 'pointer' }}
+                style={{ color: '#191b1d', cursor: 'pointer' }}
                 onClick={() => {
                   setShowEditDialog(true)
                 }}
@@ -1392,13 +1392,13 @@ function EditTokenDialog({ open, token, onClose }: { open: boolean; token: SplTo
           size="lg"
           style={{
             background:
-              'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(15, 15, 17, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)',
+              'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(25, 27, 29, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)',
             boxShadow: '0px 8px 48px rgba(171, 196, 255, 0.12)'
           }}
         >
           <Row className="justify-between items-center mb-6">
             <div className="text-3xl font-semibold text-white">Update Token Symbol/Name</div>
-            <Icon className="text-[#ABC4FF] cursor-pointer" heroIconName="x" onClick={close} />
+            <Icon className="text-[#191b1d] cursor-pointer" heroIconName="x" onClick={close} />
           </Row>
           <Col className="p-1  gap-4">
             <InputBox
@@ -1416,7 +1416,7 @@ function EditTokenDialog({ open, token, onClose }: { open: boolean; token: SplTo
               }}
             />
             <Button
-              className="frosted-glass-teal"
+              className="bg-[#191b1d] text-[#ff6123]"
               onClick={() => {
                 const mintPubString = token.mintString
                 if (userAddedTokens[mintPubString]) {

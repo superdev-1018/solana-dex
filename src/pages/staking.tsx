@@ -74,13 +74,13 @@ function StakingCard() {
   ) as (FarmPoolJsonInfo | HydratedFarmInfo)[]
   if (!infos.length)
     return (
-      <Row className="text-center justify-center text-2xl p-12 opacity-50 text-[rgb(171,196,255)]">
+      <Row className="text-center justify-center text-2xl p-12 opacity-50 text-[#ff6123]">
         <LoadingCircle />
       </Row>
     )
   return (
     <CyberpunkStyleCard>
-      <Row type="grid" className="gap-3 text-[#ABC4FF]">
+      <Row type="grid" className="gap-3 text-[#ff6123]">
         {infos.map((info) => (
           <div key={String(info.id)}>
             <Collapse>
@@ -103,7 +103,7 @@ function StakingCardCollapseItemFace({ open, info }: { open: boolean; info: Hydr
     <Row
       type="grid-x"
       className={`py-5 px-8 mobile:py-4 mobile:px-5 gap-2 items-stretch grid-cols-[1.5fr,1fr,1fr,1fr,1fr,auto] mobile:grid-cols-[1fr,1fr,1fr,auto] rounded-t-3xl mobile:rounded-t-lg ${
-        open ? '' : 'rounded-b-3xl mobile:rounded-b-lg'
+        open ? '' : 'rounded-b-3xl mobile:rounded-b-lg text-[#ff6123]'
       }`}
     >
       <CoinAvatarInfoItem info={info} />
@@ -308,7 +308,7 @@ function StakingCardCollapseItemContent({ info }: { info: HydratedFarmInfo | Far
     >
       <Row className="p-6 mobile:py-3 mobile:px-4 flex-grow ring-inset ring-1.5 mobile:ring-1 ring-[rgba(171,196,255,.5)] rounded-3xl mobile:rounded-xl items-center gap-3">
         <div className="flex-grow">
-          <div className="text-[rgba(171,196,255,0.5)] font-medium text-sm mobile:text-2xs mb-1">Deposited</div>
+          <div className="text-[#ff6123] font-medium text-sm mobile:text-2xs mb-1">Deposited</div>
           <div className="text-white font-medium text-base mobile:text-xs">
             {isHydratedFarmInfo(info) &&
               formatNumber(toString(info.userStakedLpAmount ?? 0), {
@@ -316,7 +316,7 @@ function StakingCardCollapseItemContent({ info }: { info: HydratedFarmInfo | Far
               })}{' '}
             RAY
           </div>
-          <div className="text-[rgba(171,196,255,0.5)] font-medium text-sm mobile:text-xs">
+          <div className="text-[#ff6123] font-medium text-sm mobile:text-xs">
             {isHydratedFarmInfo(info) && prices[String(info.lpMint)] && info.userStakedLpAmount
               ? toUsdVolume(toTotalPrice(info.userStakedLpAmount, prices[String(info.lpMint)]))
               : '--'}
@@ -326,7 +326,7 @@ function StakingCardCollapseItemContent({ info }: { info: HydratedFarmInfo | Far
           {isHydratedFarmInfo(info) && info.userHasStaked ? (
             <>
               <Button
-                className="frosted-glass-teal mobile:px-6 mobile:py-2 mobile:text-xs"
+                className="bg-[#191b1d] text-[#ff6123] mobile:px-6 mobile:py-2 mobile:text-xs"
                 onClick={() => {
                   if (connected) {
                     useStaking.setState({
@@ -358,7 +358,7 @@ function StakingCardCollapseItemContent({ info }: { info: HydratedFarmInfo | Far
             </>
           ) : (
             <Button
-              className="frosted-glass-teal mobile:py-2 mobile:text-xs"
+              className="text-[#ff6123] bg-[#191b1d] mobile:py-2 mobile:text-xs"
               onClick={() => {
                 if (connected) {
                   useStaking.setState({
@@ -393,13 +393,11 @@ function StakingCardCollapseItemContent({ info }: { info: HydratedFarmInfo | Far
                       idx === info.rewards.length - 1 ? 'pr-0' : ''
                     } border-[rgba(171,196,255,.5)]`}
                   >
-                    <div className="text-[rgba(171,196,255,0.5)] font-medium text-sm mobile:text-2xs mb-1">
-                      Pending rewards
-                    </div>
+                    <div className="text-[#ff6123] font-medium text-sm mobile:text-2xs mb-1">Pending rewards</div>
                     <div className="text-white font-medium text-base mobile:text-xs">
                       {toString(reward.userPendingReward ?? 0)} {reward.token?.symbol}
                     </div>
-                    <div className="text-[rgba(171,196,255,0.5)] font-medium text-sm mobile:text-2xs">
+                    <div className="text-[#ff6123] font-medium text-sm mobile:text-2xs">
                       {prices?.[String(reward.token?.mint)] && reward?.userPendingReward
                         ? toUsdVolume(toTotalPrice(reward.userPendingReward, prices[String(reward.token?.mint)]))
                         : '--'}
@@ -410,7 +408,7 @@ function StakingCardCollapseItemContent({ info }: { info: HydratedFarmInfo | Far
         </Row>
         <Button
           // disable={Number(info.pendingReward?.numerator) <= 0}
-          className="frosted-glass frosted-glass-teal rounded-xl mobile:w-full mobile:py-2 mobile:text-xs whitespace-nowrap"
+          className="rounded-[100px] mobile:w-full mobile:py-2 mobile:text-xs whitespace-nowrap text-[#ff6123] bg-[#191b1d]"
           isLoading={isApprovePanelShown}
           onClick={() => {
             isHydratedFarmInfo(info) &&
@@ -467,10 +465,10 @@ function TextInfoItem({
 }) {
   return (
     <Col className={twMerge('w-max', className)}>
-      <div className="mb-1 text-[rgba(171,196,255,0.5)] font-medium text-sm mobile:text-2xs">{name}</div>
+      <div className="mb-1 text-[#ff6123] font-medium text-sm mobile:text-2xs">{name}</div>
       <Col className="flex-grow justify-center">
         <div className="text-base mobile:text-xs">{value || '--'}</div>
-        {subValue && <div className="text-sm mobile:text-2xs text-[rgba(171,196,255,0.5)]">{subValue}</div>}
+        {subValue && <div className="text-sm mobile:text-2xs text-[#ff6123]">{subValue}</div>}
       </Col>
     </Col>
   )

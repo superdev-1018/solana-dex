@@ -118,7 +118,7 @@ function InputCreateMarketCard() {
       ) : (
         <Button
           size="lg"
-          className="w-full frosted-glass-teal mt-5"
+          className="w-full bg-[#191b1d] text-[#ff6123] mt-5"
           isLoading={isApprovePanelShown}
           validators={[
             {

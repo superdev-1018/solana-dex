@@ -364,7 +364,7 @@ function TokenSelectorDialogContent({
                   }}
                 />
                 <Button
-                  className="frosted-glass-teal"
+                  className="bg-[#191b1d] text-[#ff6123]"
                   onClick={() => {
                     recordUserAddedToken(userCustomizedTokenInfo)
                   }}
@@ -527,7 +527,7 @@ function TokenSelectorDialogTokenItem({ token, onClick }: { token: SplToken; onC
             }}
           />
           <Button
-            className="frosted-glass-teal"
+            className="bg-[#191b1d] text-[#ff6123]"
             onClick={() => {
               editUserAddedToken(userCustomizedTokenInfo, token.mint)
               setShowUpdateInfo(false)

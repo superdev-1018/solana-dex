@@ -50,7 +50,7 @@ export default function CreateFarmReviewPage() {
 
   const createFarmButton = (
     <Button
-      className="frosted-glass-teal px-16 self-stretch mobile:w-full"
+      className="bg-[#191b1d] text-[#ff6123] px-16 self-stretch mobile:w-full"
       isLoading={isApprovePanelShown}
       size={isMobile ? 'sm' : 'lg'}
       validators={[{ should: haveOver300Ray, fallbackProps: { children: 'Insufficient RAY balance' } }]}

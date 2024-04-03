@@ -54,7 +54,7 @@ export default function EditReviewPage() {
 
   const confirmFarmButton = (
     <Button
-      className="frosted-glass-teal"
+      className="bg-[#191b1d] text-[#ff6123]"
       isLoading={isApprovePanelShown}
       size={isMobile ? 'sm' : 'lg'}
       validators={[{ should: newRewards.length > 0 || editedRewards.length > 0 }]}

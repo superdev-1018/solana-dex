@@ -742,7 +742,7 @@ function ConcentratedCard() {
           )}
           {/* supply button */}
           <Button
-            className="frosted-glass-teal w-full mt-auto"
+            className="bg-[#191b1d] text-[#ff6123] w-full mt-auto"
             componentRef={liquidityButtonComponentRef}
             isLoading={isApprovePanelShown}
             validators={[

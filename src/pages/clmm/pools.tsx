@@ -241,7 +241,7 @@ function OpenNewPosition({ className }: { className?: string }) {
   const isMobile = useAppSettings((s) => s.isMobile)
   return (
     <Button
-      className={twMerge('frosted-glass-teal mobile:text-2xs', className)}
+      className={twMerge('bg-[#191b1d] text-[#ff6123] mobile:text-2xs', className)}
       onClick={() => {
         routeTo('/clmm/create-position')
       }}
@@ -274,7 +274,7 @@ function HarvestAll() {
 
   return (
     <Button
-      className="frosted-glass-teal"
+      className="bg-[#191b1d] text-[#ff6123]"
       isLoading={isApprovePanelShown}
       validators={[{ should: walletConnected }, { should: canHarvestAll }]}
       onClick={() =>
@@ -448,7 +448,7 @@ function Filter({ target }: { target: 'liquidity' | 'volume' | 'fees' | 'apr' })
               )}
               <Button
                 size="sm"
-                className="frosted-glass-teal mt-2 py-1 rounded-xl w-[140px]"
+                className="bg-[#191b1d] text-[#ff6123] mt-2 py-1 rounded-xl w-[140px]"
                 onClick={() => {
                   resetFilter(target)
                 }}
@@ -751,7 +751,7 @@ function PoolCard() {
     () => (
       <Row
         type="grid-x"
-        className="mb-3 h-12 justify-between sticky -top-6 backdrop-filter z-10 backdrop-blur-md bg-[rgba(20,16,65,0.2)] mr-scrollbar rounded-xl mobile:rounded-lg gap-2 grid-cols-[auto,1.6fr,1fr,1fr,1fr,1fr,1fr,auto]"
+        className="mb-3 h-12 justify-between sticky -top-6 backdrop-filter z-10 backdrop-blur-md bg-[#ff6123] mr-scrollbar rounded-xl mobile:rounded-lg gap-2 grid-cols-[auto,1.6fr,1fr,1fr,1fr,1fr,1fr,auto]"
       >
         <Row className="w-20 pl-9"></Row>
 
@@ -1433,7 +1433,7 @@ function PoolCardDatabaseBodyCollapseItemContent({
         <Row className={`justify-center items-center gap-2`}>
           {!hasRewardInfos && info.creator.equals(owner ?? PublicKey.default) && (
             <Button
-              className="frosted-glass-teal mobile:px-6 mobile:py-2 mobile:text-xs"
+              className="bg-[#191b1d] text-[#ff6123] mobile:px-6 mobile:py-2 mobile:text-xs"
               onClick={() => {
                 useConcentrated.setState({
                   coin1: info.base,
@@ -1453,7 +1453,7 @@ function PoolCardDatabaseBodyCollapseItemContent({
             </Button>
           )}
           <Button
-            className="frosted-glass-teal mobile:px-6 mobile:py-2 mobile:text-xs"
+            className="bg-[#191b1d] text-[#ff6123] mobile:px-6 mobile:py-2 mobile:text-xs"
             onClick={() => {
               useConcentrated.setState({
                 coin1: info.base,
@@ -1543,7 +1543,7 @@ function PoolCardDatabaseBodyCollapseItemContent({
             </div>
 
             <Button
-              className="frosted-glass-teal mobile:px-6 mobile:py-2 mobile:text-xs mobile:mt-3"
+              className="bg-[#191b1d] text-[#ff6123] mobile:px-6 mobile:py-2 mobile:text-xs mobile:mt-3"
               onClick={() => {
                 useConcentrated.setState({
                   coin1: info.base,
@@ -1822,7 +1822,7 @@ function PoolCardDatabaseBodyCollapsePositionContent({
               >
                 <div className="flex justify-end shrink">
                   <Button
-                    className="frosted-glass-teal"
+                    className="bg-[#191b1d] text-[#ff6123]"
                     size={isMobile ? 'xs' : undefined}
                     disabled={!p}
                     validators={[
@@ -1918,7 +1918,7 @@ function PoolCardDatabaseBodyCollapsePositionContent({
                 className={isMobile ? 'flex justify-center items-center pt-3' : ''}
               >
                 <Button
-                  className="frosted-glass-teal "
+                  className="bg-[#191b1d] text-[#ff6123] "
                   size={isMobile ? 'xs' : undefined}
                   isLoading={isApprovePanelShown}
                   validators={[

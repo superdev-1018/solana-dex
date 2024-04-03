@@ -17,7 +17,7 @@ const AdvancedTrade = () => {
       >
         <Row className="flex flex-col justify-center items-center  mb-5 mobile:mb-2 gap-4">
           <Tabs
-            className="my-5"
+            className="my-5 border-[#ff6123] border-[2px]"
             currentValue={'Limit-Order'}
             values={['Limit-Order', 'Stop-Loss']}
             onChange={(newTab) => {
@@ -50,7 +50,7 @@ const AdvancedTrade = () => {
             prefixClassName={'mobile:text-xs text-sm font-medium text-[rgba(196,214,255,.5)] mr-1'}
             inputClassName="font-medium text-sm mobile:text-xs text-[rgba(196,214,255)] placeholder-[rgba(196,214,255,0.5)]"
           />
-          <Button size="sm" className="frosted-glass-teal mt-2 py-2.5 rounded-xl w-[160px]">
+          <Button size="sm" className="bg-[#191b1d] text-[#ff6123] mt-2 py-2.5 w-[160px]">
             Submit
           </Button>
         </Row>

@@ -339,7 +339,7 @@ export function RemoveConcentratedLiquidityDialog({ className, onClose }: { clas
           <Row className="flex-col gap-1">
             <Button
               size={isMobile ? 'sm' : undefined}
-              className="frosted-glass frosted-glass-teal mobile:text-sm"
+              className="frosted-glass bg-[#191b1d] text-[#ff6123] mobile:text-sm"
               isLoading={isApprovePanelShown}
               componentRef={buttonComponentRef}
               validators={[

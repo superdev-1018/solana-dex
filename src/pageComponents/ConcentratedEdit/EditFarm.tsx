@@ -264,7 +264,7 @@ export default function EditFarm() {
         {!showPreview && (
           <div className="text-center">
             <Button
-              className="frosted-glass-teal mt-12 w-auto"
+              className="bg-[#191b1d] text-[#ff6123] mt-12 w-auto"
               onClick={handleClick}
               validators={[
                 {
@@ -301,7 +301,7 @@ export default function EditFarm() {
                 Back to Pools
               </Button>
             ) : (
-              <Button className="frosted-glass-teal w-fit" onClick={handleSendRewardText}>
+              <Button className="bg-[#191b1d] text-[#ff6123] w-fit" onClick={handleSendRewardText}>
                 Confirm Farm Changes
               </Button>
             )}
@@ -354,7 +354,7 @@ export default function EditFarm() {
           You must connect your wallet before you can {isEditFarm ? 'Edit' : 'Create'} Farm
         </div>
         <Button
-          className="w-full frosted-glass-teal mt-5"
+          className="w-full bg-[#191b1d] text-[#ff6123] mt-5"
           onClick={() => useAppSettings.setState({ isWalletSelectorShown: true })}
         >
           Connect Wallet

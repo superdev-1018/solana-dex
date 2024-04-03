@@ -89,7 +89,7 @@ function WarningBoard({ className }: { className: string }) {
 
           <Row className="gap-4">
             <Link href={detailedGuideHref}>
-              <Button className="frosted-glass-teal px-8" size={isMoblie ? 'sm' : 'md'}>
+              <Button className="bg-[#191b1d] text-[#ff6123] px-8" size={isMoblie ? 'sm' : 'md'}>
                 Detailed Guide
               </Button>
             </Link>
@@ -267,7 +267,7 @@ export default function CreateFarmPage() {
           </div>
 
           <Button
-            className="frosted-glass-teal mobile:w-full"
+            className="bg-[#191b1d] text-[#ff6123] mobile:w-full"
             size={isMoblie ? 'sm' : 'lg'}
             validators={[
               {

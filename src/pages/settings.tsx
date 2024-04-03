@@ -118,7 +118,7 @@ function ProgramIDTabs() {
 
       <Button
         size="lg"
-        className="w-[320px] frosted-glass-teal mt-5"
+        className="w-[320px] bg-[#191b1d] text-[#ff6123] mt-5"
         validators={[{ should: hasUserChangedSettings }]}
         onClick={() => {
           useAppAdvancedSettings.setState({
@@ -174,7 +174,7 @@ function AdvancedProgramIDEditor() {
                 }}
               />
               <Button
-                className="frosted-glass-teal"
+                className="bg-[#191b1d] text-[#ff6123]"
                 validators={[{ should: !isPubEqual(tempSettings[programIDName], MAINNET_PROGRAM_ID[programIDName]) }]}
                 onClick={() => {
                   setTempSettingsValidInfo(
@@ -192,7 +192,7 @@ function AdvancedProgramIDEditor() {
                 mainnet
               </Button>
               <Button
-                className="frosted-glass-teal"
+                className="bg-[#191b1d] text-[#ff6123]"
                 validators={[{ should: !isPubEqual(tempSettings[programIDName], DEVNET_PROGRAM_ID[programIDName]) }]}
                 onClick={() => {
                   setTempSettingsValidInfo(
@@ -216,7 +216,7 @@ function AdvancedProgramIDEditor() {
 
       <Button
         size="lg"
-        className="w-full frosted-glass-teal mt-5"
+        className="w-full bg-[#191b1d] text-[#ff6123] mt-5"
         isLoading={isApprovePanelShown}
         validators={[
           { should: hasUserChangedSettings },

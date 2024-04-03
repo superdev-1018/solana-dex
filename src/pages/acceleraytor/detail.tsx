@@ -254,7 +254,7 @@ function WinningTicketPanel({ className }: { className?: string }) {
                     <Col className="items-center">
                       <Button
                         size={isMobile ? 'sm' : 'md'}
-                        className="frosted-glass-teal mobile:w-full"
+                        className="bg-[#191b1d] text-[#ff6123] mobile:w-full"
                         isLoading={isApprovePanelShown}
                         validators={[
                           { should: !isBaseClaimed },
@@ -310,7 +310,7 @@ function WinningTicketPanel({ className }: { className?: string }) {
                     <Col className="items-center">
                       <Button
                         size={isMobile ? 'sm' : 'md'}
-                        className="frosted-glass-teal mobile:w-full"
+                        className="bg-[#191b1d] text-[#ff6123] mobile:w-full"
                         isLoading={isApprovePanelShown}
                         validators={[
                           { should: !isQuoteClaimed },
@@ -1019,7 +1019,7 @@ function LotteryInputPanel({ className }: { className?: string }) {
         />
       </div>
       <Button
-        className="block w-full frosted-glass-teal"
+        className="block w-full bg-[#191b1d] text-[#ff6123]"
         isLoading={isApprovePanelShown}
         validators={[
           {

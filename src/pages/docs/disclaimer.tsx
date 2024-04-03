@@ -61,7 +61,7 @@ export default function DisclaimerPage() {
         {getRouterStackLength() > 0 && (
           <Row className="justify-center mt-24">
             <Button
-              className="frosted-glass-teal w-[600px] mobile:w-full"
+              className="bg-[#191b1d] text-[#ff6123] w-[600px] mobile:w-full"
               size={isMobile ? 'sm' : 'md'}
               onClick={routeBack}
             >

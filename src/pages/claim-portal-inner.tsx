@@ -69,7 +69,7 @@ export default function CompensationPage() {
               }}
             />
             <Button
-              className="w-[12em] frosted-glass-teal mb-8"
+              className="w-[12em] bg-[#191b1d] text-[#ff6123] mb-8"
               size={isMobile ? 'sm' : 'md'}
               isLoading={isApprovePanelShown}
               validators={[
@@ -127,7 +127,7 @@ export default function CompensationPage() {
           <div className="mt-10 mx-auto text-[#abc4ff] text-sm">Connect wallet to see LP position details</div>
           <div className="mt-14 mx-auto w-[400px] mobile:w-full">
             <Button
-              className="w-full frosted-glass-teal mb-8"
+              className="w-full bg-[#191b1d] text-[#ff6123] mb-8"
               size={isMobile ? 'sm' : 'md'}
               onClick={() => useAppSettings.setState({ isWalletSelectorShown: true })}
             >
@@ -374,7 +374,7 @@ function InputCard({ info }: { info: HydratedCompensationInfoItem }) {
         <div className="mx-auto mt-10 w-[calc((100%-2*40px)/3)] mobile:w-full">
           <Button
             size="lg"
-            className="w-full frosted-glass-teal"
+            className="w-full bg-[#191b1d] text-[#ff6123]"
             isLoading={info.canClaim && isApprovePanelShown}
             validators={[
               {

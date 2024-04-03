@@ -81,7 +81,7 @@ export default function Liquidity() {
         <LiquidityPageHead />
         <LiquidityCard />
         <UserLiquidityExhibition />
-        <CreatePoolCardEntry />
+        {/* <CreatePoolCardEntry /> */}
       </PageLayout>
     </LiquidityUIContextProvider>
   )
@@ -357,7 +357,7 @@ function LiquidityCard() {
             <Icon
               size="sm"
               heroIconName="search"
-              className={`p-2 frosted-glass frosted-glass-teal rounded-full mr-4 clickable text-[#39D0D8] select-none ${
+              className={`p-2 frosted-glass bg-[#191b1d] text-[#ff6123] rounded-full mr-4 clickable text-[#39D0D8] select-none ${
                 isApprovePanelShown ? 'not-clickable' : ''
               }`}
               onClick={() => {
@@ -418,7 +418,7 @@ function LiquidityCard() {
       )}
       {/* supply button */}
       <Button
-        className="frosted-glass-teal w-full mt-5"
+        className="text-[#ff6123] bg-[#191b1d] w-full mt-5"
         componentRef={liquidityButtonComponentRef}
         isLoading={isApprovePanelShown}
         validators={[
@@ -938,8 +938,17 @@ function UserLiquidityExhibition() {
 
   return (
     <div className="mt-12 max-w-[456px] self-center">
-      <div className="mb-6 text-xl font-medium text-white">Your Liquidity</div>
-      <Card className="p-6 mt-6 mobile:py-5 mobile:px-3 bg-cyberpunk-card-bg" size="lg">
+      <Button
+        className="flex items-center text-[#ff6123 ] bg-[#191b1d]"
+        onClick={() => {
+          routeTo('/liquidity/create')
+        }}
+      >
+        <Icon className="mr-2" heroIconName="plus" />
+        <div>Create Pool</div>
+      </Button>
+      {/* <div className="mb-6 text-xl font-medium text-white">Your Liquidity</div> */}
+      {/* <Card className="p-6 mt-6 mobile:py-5 mobile:px-3 bg-cyberpunk-card-bg" size="lg">
         <List
           items={exhibitionInfos}
           getItemKey={(info) => toPubString(info.id)}
@@ -1010,7 +1019,7 @@ function UserLiquidityExhibition() {
                       </Col>
                       <Row className="gap-4 mb-1">
                         <Button
-                          className="text-base mobile:text-sm font-medium frosted-glass frosted-glass-teal rounded-xl flex-grow"
+                          className="text-base mobile:text-sm font-medium frosted-glass bg-[#191b1d] text-[#ff6123] rounded-xl flex-grow"
                           onClick={() => {
                             useLiquidity.setState({
                               currentJsonInfo: info.jsonInfo,
@@ -1023,7 +1032,7 @@ function UserLiquidityExhibition() {
                         </Button>
                         {canMigrate && (
                           <Button
-                            className="text-base mobile:text-sm font-medium frosted-glass frosted-glass-teal rounded-xl flex-grow"
+                            className="text-base mobile:text-sm font-medium frosted-glass bg-[#191b1d] text-[#ff6123] rounded-xl flex-grow"
                             onClick={() => {
                               useLiquidity.setState({
                                 currentJsonInfo: info.jsonInfo,
@@ -1113,7 +1122,7 @@ function UserLiquidityExhibition() {
         <div className="text-xs mobile:text-2xs font-medium text-[rgba(171,196,255,0.5)]">
           If you staked your LP tokens in a farm, unstake them to see them here
         </div>
-      </Card>
+      </Card> */}
     </div>
   )
 }
@@ -1137,7 +1146,7 @@ function CreatePoolCardEntry() {
           </div>
 
           <Button
-            className="flex items-center frosted-glass-teal opacity-80"
+            className="flex items-center bg-[#191b1d] text-[#ff6123] opacity-80"
             onClick={() => {
               routeTo('/liquidity/create')
             }}

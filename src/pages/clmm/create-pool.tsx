@@ -60,7 +60,7 @@ function WarningBoard({ className }: { className: string }) {
 
           <Row className="gap-4">
             <Button
-              className="frosted-glass-teal mobile:px-4"
+              className="bg-[#191b1d] text-[#ff6123] mobile:px-4"
               size={isMobile ? 'sm' : 'md'}
               onClick={() => {
                 setNeedWarning(false)

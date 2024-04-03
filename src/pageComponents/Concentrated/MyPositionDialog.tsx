@@ -236,7 +236,7 @@ function MyPositionCardPendingRewardInfo({ className }: { className?: string }) 
       <Row className="items-center gap-8">
         <div className="font-medium text-2xl text-white">≈{toUsdVolume(totalVolume)}</div>
         <Button
-          className="frosted-glass-teal"
+          className="bg-[#191b1d] text-[#ff6123]"
           size={isMobile ? 'sm' : undefined}
           isLoading={isApprovePanelShown}
           onClick={() =>
@@ -363,7 +363,7 @@ function MyPositionCardHeader({ className }: { className?: string }) {
       </Row>
       <Row className="items-center gap-2 mobile:grow">
         <Button
-          className="frosted-glass-teal mobile:grow"
+          className="bg-[#191b1d] text-[#ff6123] mobile:grow"
           onClick={() => {
             useConcentrated.setState({
               isAddDialogOpen: true,
@@ -379,7 +379,7 @@ function MyPositionCardHeader({ className }: { className?: string }) {
         </Button>
         {isEmptyPosition ? (
           <Button
-            className="frosted-glass-teal ghost mobile:grow"
+            className="bg-[#191b1d] text-[#ff6123] ghost mobile:grow"
             size={isMobile ? 'sm' : undefined}
             isLoading={isApprovePanelShown}
             onClick={() => {
@@ -405,7 +405,7 @@ function MyPositionCardHeader({ className }: { className?: string }) {
           </Button>
         ) : (
           <Button
-            className="frosted-glass-teal ghost mobile:grow"
+            className="bg-[#191b1d] text-[#ff6123] ghost mobile:grow"
             size={isMobile ? 'sm' : undefined}
             isLoading={isApprovePanelShown}
             onClick={() => {

@@ -175,7 +175,7 @@ function FarmHarvestAllButton({ infos }: { infos: HydratedFarmInfo[] }) {
   const canHarvestAll = useMemo(() => Boolean(infos.length), [infos])
   return (
     <Button
-      className="frosted-glass-teal"
+      className="bg-[#191b1d] text-[#ff6123]"
       isLoading={isApprovePanelShown}
       validators={[{ should: walletConnected }, { should: canHarvestAll }]}
       onClick={() => {
@@ -601,7 +601,7 @@ function FarmCard() {
       {!isMobile && (
         <Row
           type="grid-x"
-          className="mb-3 h-12  sticky -top-6 backdrop-filter z-10 backdrop-blur-md bg-[rgba(20,16,65,0.2)] mr-scrollbar rounded-xl mobile:rounded-lg gap-2 grid-cols-[auto,1.5fr,1.2fr,1fr,1fr,auto]"
+          className="mb-3 h-12  sticky -top-6 backdrop-filter z-10 backdrop-blur-md bg-[#ff6123] mr-scrollbar rounded-xl mobile:rounded-lg gap-2 grid-cols-[auto,1.5fr,1.2fr,1fr,1fr,auto]"
         >
           <Row className="w-20 pl-9"></Row>
           {/* table head column: Farm */}
@@ -1166,7 +1166,7 @@ function FarmCardDatabaseBodyCollapseItemContent({ farmInfo }: { farmInfo: Hydra
   const lpPrices = usePools((s) => s.lpPrices)
   const prices = useToken((s) => s.tokenPrices)
   const isMobile = useAppSettings((s) => s.isMobile)
-  const lightBoardClass = 'bg-[rgba(20,16,65,.2)]'
+  const lightBoardClass = 'bg-[#ff6123]'
   const connected = useWallet((s) => s.connected)
   const connecting = useWallet((s) => s.connecting)
   const owner = useWallet((s) => s.owner)
@@ -1215,7 +1215,7 @@ function FarmCardDatabaseBodyCollapseItemContent({ farmInfo }: { farmInfo: Hydra
                 <>
                   {canMigrate ? (
                     <Button
-                      className="text-base mobile:text-sm font-medium frosted-glass frosted-glass-teal rounded-xl flex-grow"
+                      className="text-base mobile:text-sm font-medium frosted-glass bg-[#191b1d] text-[#ff6123] rounded-xl flex-grow"
                       onClick={() => {
                         // TODO: load data here
                         useConcentrated.setState({
@@ -1230,7 +1230,7 @@ function FarmCardDatabaseBodyCollapseItemContent({ farmInfo }: { farmInfo: Hydra
                     </Button>
                   ) : (
                     <Button
-                      className="frosted-glass-teal mobile:px-6 mobile:py-2 mobile:text-xs"
+                      className="bg-[#191b1d] text-[#ff6123] mobile:px-6 mobile:py-2 mobile:text-xs"
                       disabled={(farmInfo.isClosedPool && !farmInfo.isUpcomingPool) || !hasLp}
                       validators={[
                         { should: !farmInfo.isClosedPool },
@@ -1290,7 +1290,7 @@ function FarmCardDatabaseBodyCollapseItemContent({ farmInfo }: { farmInfo: Hydra
                 </>
               ) : (
                 <Button
-                  className="frosted-glass-teal mobile:py-2 mobile:text-xs"
+                  className="bg-[#191b1d] text-[#ff6123] mobile:py-2 mobile:text-xs"
                   validators={[
                     { should: !farmInfo.isClosedPool },
                     {
@@ -1369,7 +1369,7 @@ function FarmCardDatabaseBodyCollapseItemContent({ farmInfo }: { farmInfo: Hydra
             </div>
             <Button
               // disable={Number(info.pendingReward?.numerator) <= 0}
-              className="frosted-glass-teal rounded-xl mobile:w-full mobile:py-2 mobile:text-xs whitespace-nowrap"
+              className="bg-[#191b1d] text-[#ff6123] rounded-xl mobile:w-full mobile:py-2 mobile:text-xs whitespace-nowrap"
               isLoading={isApprovePanelShown}
               onClick={() => {
                 txFarmHarvest(farmInfo, {
@@ -1486,7 +1486,7 @@ function FarmCardDatabaseBodyCollapseItemContent({ farmInfo }: { farmInfo: Hydra
       {isMintEqual(farmInfo.creator, owner) && (
         <Row className="bg-[#14104133] py-3 px-8 justify-end">
           <Button
-            className="frosted-glass-teal"
+            className="bg-[#191b1d] text-[#ff6123]"
             size={isMobile ? 'sm' : 'md'}
             onClick={() => {
               useCreateFarms.setState({
@@ -1581,7 +1581,7 @@ function FarmStakeLpDialog() {
           />
           <Row className="flex-col gap-1">
             <Button
-              className="frosted-glass-teal"
+              className="bg-[#191b1d] text-[#ff6123]"
               componentRef={buttonComponentRef}
               isLoading={isApprovePanelShown}
               validators={[

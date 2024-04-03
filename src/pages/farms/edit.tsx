@@ -167,7 +167,7 @@ export default function FarmEditPage() {
         </Row>
 
         <Button
-          className="flex frosted-glass-teal mx-auto mt-4 mb-12 mobile:w-full"
+          className="flex bg-[#191b1d] text-[#ff6123] mx-auto mt-4 mb-12 mobile:w-full"
           size={isMobile ? 'sm' : 'lg'}
           validators={[
             {

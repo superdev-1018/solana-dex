@@ -37,7 +37,7 @@ export default function WelcomeBetaDialog(props: { content: react.ReactNode; onC
 
           <div className="self-stretch">
             <Col>
-              <Button className={`frosted-glass-teal`} onClick={confirm}>
+              <Button className={`bg-[#191b1d] text-[#ff6123]`} onClick={confirm}>
                 OK
               </Button>
             </Col>

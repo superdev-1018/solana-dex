@@ -85,7 +85,7 @@ export default function WalletWidget() {
     >
       {isMobile ? (
         <Button
-          className={`frosted-glass frosted-glass-teal rounded-lg p-2${connecting ? ' text-xs' : ''}`}
+          className={`frosted-glass bg-[#191b1d] text-[#ff6123] rounded-lg p-2${connecting ? ' text-xs' : ''}`}
           onClick={() => {
             if (!publicKey) useAppSettings.setState({ isWalletSelectorShown: true })
           }}
@@ -102,7 +102,7 @@ export default function WalletWidget() {
         </Button>
       ) : (
         <Button
-          className="frosted-glass frosted-white"
+          className="bg-[#191b1d] hover:bg-[#ff6123] hover:text-[#191b1d]"
           onClick={() => {
             if (!publicKey) useAppSettings.setState({ isWalletSelectorShown: true })
           }}
@@ -110,16 +110,14 @@ export default function WalletWidget() {
           {connected ? (
             <Row className="items-center gap-3 my-0.5">
               <Icon size="sm" iconSrc="/icons/msic-wallet-connected.svg" />
-              <div className="text-sm font-medium text-white">
+              <div className="text-sm font-medium">
                 {String(publicKey).slice(0, 5)}...{String(publicKey).slice(-5)}
               </div>
             </Row>
           ) : (
             <Row className="items-center gap-3 my-0.5">
-              <Icon size="sm" iconSrc="/icons/msic-wallet.svg" />
-              <div className="text-sm font-medium text-[#e4f7f7]">
-                {connecting ? 'Connecting...' : 'Connect Wallet'}
-              </div>
+              {/* <Icon size="sm" iconSrc="/icons/msic-wallet.svg" /> */}
+              <div className="text-sm font-medium">{connecting ? 'Connecting...' : 'Connect Wallet'}</div>
             </Row>
           )}
         </Button>

@@ -427,7 +427,7 @@ function SwapCard() {
             <Icon
               size="sm"
               iconSrc="/icons/msic-swap.svg"
-              className={`p-2 frosted-glass frosted-glass-teal rounded-full mr-4 ${
+              className={`p-2 frosted-glass bg-[#191b1d] text-[#ff6123] rounded-full mr-4 ${
                 isApprovePanelShown ? 'not-clickable' : 'clickable'
               } select-none transition`}
               onClick={() => {
@@ -500,7 +500,7 @@ function SwapCard() {
 
       {/* swap sol and wsol */}
       <Button
-        className="w-full frosted-glass-teal mt-5"
+        className="w-full mt-5 text-[#ff6123] bg-[#191b1d]"
         componentRef={swapButtonComponentRef}
         isLoading={isApprovePanelShown}
         validators={[
@@ -767,7 +767,7 @@ function SwapPriceAcceptChip() {
             </Tooltip>
           </Row>
 
-          <Button size="sm" className="frosted-glass-teal" onClick={() => setHasAcceptedPriceChange(true)}>
+          <Button size="sm" className="bg-[#191b1d] text-[#ff6123]" onClick={() => setHasAcceptedPriceChange(true)}>
             Accept
           </Button>
         </Row>
@@ -1551,7 +1551,7 @@ function KLineChartItemThumbnail({
 //               size="lg"
 //               style={{
 //                 background:
-//                   'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(15, 15, 17, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)'
+//                   'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(25, 27, 29, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)'
 //               }}
 //             >
 //               <Row className="gap-4 items-center">
@@ -1562,7 +1562,7 @@ function KLineChartItemThumbnail({
 //                 </Col>
 
 //                 <Button
-//                   className="flex items-center frosted-glass-teal opacity-80"
+//                   className="flex items-center bg-[#191b1d] text-[#ff6123] opacity-80"
 //                   onClick={() => {
 //                     txUnwrapAllWSOL()
 //                   }}

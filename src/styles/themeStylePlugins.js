@@ -141,7 +141,7 @@ exports.cyberpunkBgLight = plugin(({ addUtilities }) => {
 
 exports.glassStyle = plugin(({ addUtilities }) => {
   addUtilities({
-    '.frosted-glass-smoke , .frosted-glass-lightsmoke , .frosted-glass-teal , .frosted-glass-skygray , .frosted-glass':
+    '.frosted-glass-smoke , .frosted-glass-lightsmoke , .bg-[#191b1d] text-[#ff6123] , .frosted-glass-skygray , .frosted-glass':
       {
         '--text-color': 'hsl(0, 0%, 100%)',
         '--border-color': 'hsl(0, 0%, 100%)',
@@ -168,13 +168,13 @@ exports.glassStyle = plugin(({ addUtilities }) => {
         linear-gradient(hsl(0deg 0% 0% / 5%), hsl(0deg 0% 0% / 5%))`
         }
       },
-    '.frosted-glass-teal': {
+    '.bg-[#191b1d] text-[#ff6123]': {
       '--text-color': 'hsl(183, 67%, 54%)',
       '--border-color': 'hsl(165, 87%, 65%)',
       '--bg-board-color': 'hsl(183, 67%, 54%, 0.2)',
       '--bg-board-color-2': 'hsl(183, 67%, 54%, 0)'
     },
-    '.frosted-glass-teal.ghost': {
+    '.bg-[#191b1d] text-[#ff6123].ghost': {
       '--text-color': 'hsl(183, 67%, 54%)',
       '--border-color': 'hsl(165, 87%, 65%, 0.5)',
       '--bg-board-color': 'hsl(183, 67%, 54%, 0.05)',

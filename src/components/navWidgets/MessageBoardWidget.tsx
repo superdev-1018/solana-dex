@@ -112,7 +112,7 @@ export default function MessageBoardWidget() {
               </Markdown>
             </div>
 
-            <Button className="frosted-glass-teal" onClick={close}>
+            <Button className="bg-[#191b1d] text-[#ff6123]" onClick={close}>
               Mark as Read
             </Button>
           </Card>

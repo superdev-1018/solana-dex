@@ -247,7 +247,7 @@ function VersionTooOldDialog() {
             <div className="self-stretch">
               <Col>
                 <Button
-                  className={`text-[#ABC4FF]  frosted-glass-teal`}
+                  className={`text-[#ABC4FF]  bg-[#191b1d] text-[#ff6123]`}
                   onClick={() => refreshWindow({ noCache: true })}
                 >
                   Refresh
@@ -340,7 +340,7 @@ function DisclaimerDialog() {
 
           <Button
             disabled={!userHaveClickedAgree}
-            className={`text-[#ABC4FF]  frosted-glass-teal`}
+            className={`text-[#ABC4FF]  bg-[#191b1d] text-[#ff6123]`}
             onClick={confirmDisclaimer}
           >
             Agree and Continue
@@ -393,7 +393,7 @@ function MigrateBubble() {
       </Col>
       <Row className="gap-8">
         <Button
-          className=" mobile:flex-grow frosted-glass-teal w-40"
+          className=" mobile:flex-grow bg-[#191b1d] text-[#ff6123] w-40"
           onClick={() => linkTo('https://v1.raydium.io/migrate/')}
         >
           Migrate
@@ -486,7 +486,7 @@ function Navbar({
   )
   const mobileNavContent = (
     <Grid className="grid-cols-[1fr,2fr,1fr] gap-2 mobile:px-5 mobile:py-3   items-center bg-cyberpunk-card-bg ">
-      <div className="frosted-glass-teal rounded-lg p-2 clickable justify-self-start" onClick={onOpenMenu}>
+      <div className="bg-[#191b1d] text-[#ff6123] rounded-lg p-2 clickable justify-self-start" onClick={onOpenMenu}>
         <Icon className="w-4 h-4" iconClassName="w-4 h-4" iconSrc="/icons/msic-menu.svg" />
       </div>
 
@@ -760,8 +760,8 @@ function LinkItem({
     <Link
       href={href}
       noTextStyle
-      className={`group block py-2.5 mobile:py-2 px-4 mobile:px-1 rounded-xl mobile:rounded-lg hover:bg-[rgba(57,208,216,0.05)] ${
-        isCurrentRoutePath ? 'bg-[rgba(57,208,216,0.1)]' : ''
+      className={`group block py-2.5 mobile:py-2 px-4 mobile:px-1 rounded-xl mobile:rounded-lg hover:border-[4px] border-[#ff6123] rounded-[100px] ${
+        isCurrentRoutePath ? 'bg-[#ff6123]' : ''
       }`}
     >
       <Row className="items-center">
@@ -769,7 +769,7 @@ function LinkItem({
           <Icon size={isMobile ? 'xs' : 'sm'} iconSrc={icon} />
         </div> */}
         <Row
-          className={`grow items-center justify-between text-[#ACE3E5] ${
+          className={`grow items-center justify-between text-[#ff6123] ${
             isCurrentRoutePath ? 'text-[rgba(200, 200, 200, 1)]' : ''
           } text-sm mobile:text-[0.85rem] font-medium`}
         >
@@ -1111,7 +1111,7 @@ function RpcConnectionPanelPopover({ close: closePanel }: { close: () => void })
             }}
           />
           <Button
-            className="frosted-glass-teal"
+            className="bg-[#191b1d] text-[#ff6123]"
             onClick={() => {
               switchRpc({ url: userCostomizedUrlText }).then((isSuccess) => {
                 if (isSuccess === true) {

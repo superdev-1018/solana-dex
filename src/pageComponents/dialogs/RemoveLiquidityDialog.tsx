@@ -81,7 +81,7 @@ export function RemoveLiquidityDialog({
 
           <Row className="flex-col gap-1">
             <Button
-              className="frosted-glass frosted-glass-teal"
+              className="frosted-glass bg-[#191b1d] text-[#ff6123]"
               isLoading={isApprovePanelShown}
               componentRef={buttonComponentRef}
               validators={[

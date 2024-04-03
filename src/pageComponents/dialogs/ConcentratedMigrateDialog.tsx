@@ -112,7 +112,7 @@ export default function ConcentratedMigrateDialog({
 
       <div className="self-stretch">
         <Col>
-          <Button className="text-[#ABC4FF] frosted-glass-teal">Migrate</Button>
+          <Button className="text-[#ABC4FF] bg-[#191b1d] text-[#ff6123]">Migrate</Button>
           <Button className="text-[#ABC4FF] text-sm -mb-4" type="text" onClick={closeDialog}>
             Not now
           </Button>
@@ -663,7 +663,7 @@ function DetailPanel({
       {/* button */}
       <div className="mt-6">
         <Button
-          className="w-full frosted-glass-teal"
+          className="w-full bg-[#191b1d] text-[#ff6123]"
           isLoading={isTxProcessing || isApprovePanelShown}
           onClick={() => {
             assert(

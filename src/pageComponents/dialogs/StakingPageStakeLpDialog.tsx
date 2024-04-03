@@ -83,7 +83,7 @@ export function StakingPageStakeLpDialog() {
           />
           <Row className="flex-col gap-1">
             <Button
-              className="frosted-glass-teal"
+              className="bg-[#191b1d] text-[#ff6123]"
               isLoading={isApprovePanelShown}
               validators={[
                 { should: connected },

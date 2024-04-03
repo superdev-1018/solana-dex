@@ -78,7 +78,7 @@ export default function AprCalcDialog() {
               )
             })}
           </Col>
-          <Button className="w-full frosted-glass-teal" onClick={() => closeDialog()}>
+          <Button className="w-full bg-[#191b1d] text-[#ff6123]" onClick={() => closeDialog()}>
             Confirm
           </Button>
         </Card>

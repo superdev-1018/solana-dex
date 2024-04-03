@@ -247,7 +247,7 @@ export default function CreatePoolPreviewDialog({
           <Col className="items-center mt-5 mobile:mt-3">
             <div className="self-stretch">
               <Col>
-                <Button className={`frosted-glass-teal`} onClick={() => confirm(close)}>
+                <Button className={`bg-[#191b1d] text-[#ff6123]`} onClick={() => confirm(close)}>
                   Create Pool and Deposit
                 </Button>
               </Col>

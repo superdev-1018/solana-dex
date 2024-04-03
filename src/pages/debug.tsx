@@ -44,7 +44,7 @@ function MigrateOldAccountButton() {
       </div>
       <div className="text-[#abc4ff] mb-4">Migrate Old Account To PDA And Harvest Reward</div>
       <Button
-        className="frosted-glass-teal"
+        className="bg-[#191b1d] text-[#ff6123]"
         isLoading={isProcessing || isApprovePanelShown}
         onClick={() => {
           setIsProcessing(true)
@@ -182,7 +182,7 @@ function MigrateATAInputCard() {
 
       <Button
         size="lg"
-        className="mx-auto w-[40em] mobile:w-full frosted-glass-teal mt-5"
+        className="mx-auto w-[40em] mobile:w-full bg-[#191b1d] text-[#ff6123] mt-5"
         isLoading={isApprovePanelShown}
         validators={[
           {

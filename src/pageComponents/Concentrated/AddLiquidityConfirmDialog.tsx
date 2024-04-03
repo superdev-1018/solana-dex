@@ -140,7 +140,7 @@ export default function AddLiquidityConfirmDialog({
               <Col className="items-center mt-5 mobile:mt-3">
                 <div className="self-stretch">
                   <Col>
-                    <Button className={`frosted-glass-teal`} onClick={onBackToAllMyPools}>
+                    <Button className={`bg-[#191b1d] text-[#ff6123]`} onClick={onBackToAllMyPools}>
                       View My Pools
                     </Button>
                   </Col>
@@ -278,7 +278,7 @@ export default function AddLiquidityConfirmDialog({
                 <div className="self-stretch">
                   <Col>
                     <Button
-                      className={`frosted-glass-teal`}
+                      className={`bg-[#191b1d] text-[#ff6123]`}
                       isLoading={isApprovePanelShown}
                       validators={[
                         {

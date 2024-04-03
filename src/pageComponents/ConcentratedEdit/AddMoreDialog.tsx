@@ -247,7 +247,7 @@ export default function AddMoreDialog({
 
             <Row className="justify-between items-center mb-6 mobile:mb-2">
               <Button
-                className="frosted-glass-teal min-w-[120px]"
+                className="bg-[#191b1d] text-[#ff6123] min-w-[120px]"
                 validators={[
                   {
                     should: walletConnected,

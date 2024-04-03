@@ -103,7 +103,7 @@ export default function RewardInputDialog({
 
           <Row className="mt-6 justify-between">
             <Button
-              className="frosted-glass-teal mobile:w-full"
+              className="bg-[#191b1d] text-[#ff6123] mobile:w-full"
               size={isMobile ? 'sm' : 'lg'}
               validators={[
                 {

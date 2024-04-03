@@ -40,7 +40,7 @@ function WalletSelectorPanelItem({
 
   return (
     <Row
-      className={`relative items-center gap-3 m-auto px-6 mobile:px-3 mobile:py-1.5 py-3 w-64 mobile:w-[42vw] h-14  mobile:h-12 frosted-glass frosted-glass-teal rounded-xl mobile:rounded-lg ${
+      className={`relative items-center gap-3 m-auto px-6 mobile:px-3 mobile:py-1.5 py-3 w-64 mobile:w-[42vw] h-14  mobile:h-12 frosted-glass bg-[#191b1d] text-[#ff6123] rounded-xl mobile:rounded-lg ${
         detected ? 'opacity-100' : 'opacity-60'
       } clickable clickable-filter-effect`}
       // TODO disable status
@@ -143,7 +143,7 @@ function SimulateWallet({ onClick }: { onClick?(): void }) {
         }}
       />
       <Button
-        className="frosted-glass-teal"
+        className="bg-[#191b1d] text-[#ff6123]"
         onClick={() => {
           if (valueRef.current) {
             // @ts-expect-error force

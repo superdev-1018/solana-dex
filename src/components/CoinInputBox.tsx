@@ -296,7 +296,7 @@ export default function CoinInputBox({
   return (
     <Row
       className={twMerge(
-        `relative flex-col bg-[#0f0f11] cursor-text rounded-xl py-3 px-6 mobile:px-4 ${
+        `relative flex-col bg-[#191b1d] border-[2px] border-[#ff6123] cursor-text rounded-xl py-3 px-6 mobile:px-4 ${
           disabled && !noDisableStyle ? 'pointer-events-none-entirely cursor-default opacity-50' : ''
         }`,
         className
@@ -360,9 +360,9 @@ export default function CoinInputBox({
               }}
             >
               {haveCoinIcon && token && <CoinAvatar token={token} size={isMobile ? 'smi' : 'md'} />}
-              <Col className="items-start">
+              <Col className="items-start ">
                 <div
-                  className={`text-[rgb(171,196,255)] max-w-[7em] ${
+                  className={`text-[#ff6123] max-w-[7em] ${
                     token ? 'min-w-[2em]' : ''
                   } overflow-hidden text-ellipsis font-medium text-base flex-grow mobile:text-sm whitespace-nowrap`}
                 >
@@ -383,7 +383,7 @@ export default function CoinInputBox({
             {!hideMaxButton && (
               <Button
                 disabled={disabledInput}
-                className="py-0.5 px-1.5 rounded text-[rgba(171,196,255,.5)] font-bold bg-[#1B1659] bg-opacity-80 text-xs mobile:text-2xs transition"
+                className="py-0.5 px-1.5 rounded font-bold bg-[#191b1d] bg-opacity-80 text-xs mobile:text-2xs transition"
                 onClick={() => {
                   if (onCustomMax) {
                     onCustomMax()
@@ -399,7 +399,7 @@ export default function CoinInputBox({
             {haveHalfButton && (
               <Button
                 disabled={disabledInput}
-                className="py-0.5 px-1.5 rounded text-[rgba(171,196,255,.5)] font-bold bg-[#1B1659] bg-opacity-80 text-xs mobile:text-2xs transition"
+                className="py-0.5 px-1.5 rounded font-bold bg-[#191b1d] bg-opacity-80 text-xs mobile:text-2xs transition"
                 onClick={() => {
                   fillAmountWithBalance(0.5)
                 }}

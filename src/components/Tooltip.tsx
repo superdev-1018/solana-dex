@@ -108,7 +108,7 @@ export default function Tooltip({
               className={twMerge('TooltipPanel p-4 bg-[#0C0926] rounded-lg text-xs text-white', panelClassName)}
               style={{
                 background: darkGradient
-                  ? 'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(15, 15, 17, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)'
+                  ? 'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(25, 27, 29, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)'
                   : 'default',
                 border: darkGradient ? '1px solid  rgba(171, 196, 255, 0.2)' : 'none'
               }}

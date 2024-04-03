@@ -74,9 +74,9 @@ export default function Dialog({
             leaveTo="opacity-0"
           >
             <div
-              className={`transition fixed inset-0 ${
-                maskNoBlur ? '' : 'backdrop-filter backdrop-blur'
-              } bg-[rgba(20,16,65,0.4)] ${canClosedByMask ? '' : 'pointer-events-none'}`}
+              className={`transition fixed inset-0 ${maskNoBlur ? '' : 'backdrop-filter backdrop-blur'} bg-[#ff6123] ${
+                canClosedByMask ? '' : 'pointer-events-none'
+              }`}
               onClick={closeDialog}
             />
           </Transition.Child>

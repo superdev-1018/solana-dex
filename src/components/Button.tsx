@@ -91,19 +91,18 @@ export default function Button({ validators, ...restProps }: ButtonProps) {
         if (!isActive) ev.stopPropagation()
         if (isActive || haveFallbackClick) onClick?.({ ev })
       }}
-      className={
+      className={`${
         noComponentCss
           ? className
           : twMerge(
-              'Button select-none inline-flex justify-center items-center gap-2',
               type === 'text'
-                ? textButtonTailwind({ size, disable: !isActive, haveFallbackClick })
-                : type === 'outline'
-                ? outlineButtonTailwind({ size, disable: !isActive, haveFallbackClick })
+                ? // ? textButtonTailwind({ size, disable: !isActive, haveFallbackClick })
+                  // : type === 'outline'
+                  outlineButtonTailwind({ size, disable: !isActive, haveFallbackClick })
                 : solidButtonTailwind({ size, disable: !isActive, haveFallbackClick }),
               className
             )
-      }
+      } text-[#ff6123] bg-[#191b1d] border border-[#ff6123] border-[2px]`}
     >
       {isLoading && <LoadingCircleSmall className="w-4 h-4" />}
       {prefix}
@@ -121,18 +120,16 @@ function solidButtonTailwind({
 }: { size?: 'xs' | 'md' | 'sm' | 'lg' | 'default'; disable?: boolean; haveFallbackClick?: boolean } = {}) {
   return `${
     size === 'lg'
-      ? 'px-6 py-3.5 rounded-xl mobile:rounded-lg font-bold'
+      ? 'px-6 py-3.5 rounded-[100px] mobile:rounded-lg font-bold '
       : size === 'sm'
-      ? 'px-4 py-2 text-sm rounded-xl font-medium'
+      ? 'px-4 py-2 text-sm rounded-[100px] font-medium'
       : size === 'xs'
-      ? 'px-4 py-2 text-xs rounded-xl font-medium'
-      : 'px-4 py-2.5  rounded-xl mobile:rounded-lg font-medium'
+      ? 'px-4 py-2 text-xs rounded-[100px] font-medium'
+      : 'px-4 py-2.5  rounded-[100px] mobile:rounded-lg font-medium '
   } whitespace-nowrap appearance-none ${
     disable
-      ? `bg-formkit-thumb-disable text-formkit-thumb-text-disabled opacity-40 ${
-          haveFallbackClick ? '' : 'cursor-not-allowed'
-        }`
-      : 'bg-formkit-thumb text-formkit-thumb-text-normal clickable clickable-filter-effect'
+      ? `bg-formkit-thumb-disable opacity-40 ${haveFallbackClick ? '' : 'cursor-not-allowed'}`
+      : 'bg-formkit-thumb clickable clickable-filter-effect'
   }`
 }
 
@@ -169,7 +166,7 @@ function textButtonTailwind({
       : size === 'xs'
       ? 'px-4 py-2 text-xs rounded-xl'
       : 'px-4 py-2.5  rounded-xl mobile:rounded-lg'
-  } whitespace-nowrap appearance-none font-medium text-white ${
+  } whitespace-nowrap appearance-none font-medium ${
     disable ? `opacity-40 ${haveFallbackClick ? '' : 'cursor-not-allowed'}` : 'clickable'
   }`
 }

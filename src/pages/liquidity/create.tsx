@@ -80,7 +80,7 @@ function PanelContent({ close }: { close(): void }) {
         onUserInput={(value) => useCreatePool.setState({ marketId: value })}
       />
       <Button
-        className="frosted-glass-teal w-full"
+        className="bg-[#191b1d] text-[#ff6123] w-full"
         isLoading={isLoading}
         validators={[
           { should: Boolean(marketId) },
@@ -199,7 +199,7 @@ function PanelContent({ close }: { close(): void }) {
       </Row>
 
       <Button
-        className="frosted-glass-teal w-full"
+        className="bg-[#191b1d] text-[#ff6123] w-full"
         isLoading={isApprovePanelShown}
         validators={[
           {
@@ -429,7 +429,7 @@ function UserCreatedPoolsExhibitionPanel() {
                 </Col>
                 <Row className="gap-4 mb-1">
                   <Button
-                    className="text-base font-medium frosted-glass frosted-glass-teal rounded-xl flex-grow"
+                    className="text-base font-medium frosted-glass bg-[#191b1d] text-[#ff6123] rounded-xl flex-grow"
                     onClick={() => {
                       push(`/liquidity/add/?ammId=${info.ammId}`)
                     }}

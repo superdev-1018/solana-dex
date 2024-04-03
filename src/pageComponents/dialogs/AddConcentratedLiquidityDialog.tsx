@@ -368,7 +368,7 @@ export function AddConcentratedLiquidityDialog() {
 
           <Row className="flex-col gap-1">
             <Button
-              className="frosted-glass frosted-glass-teal mobile:text-sm"
+              className="frosted-glass bg-[#191b1d] text-[#ff6123] mobile:text-sm"
               size={isMobile ? 'sm' : undefined}
               isLoading={isApprovePanelShown}
               componentRef={buttonComponentRef}

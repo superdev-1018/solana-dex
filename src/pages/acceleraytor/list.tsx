@@ -286,7 +286,7 @@ function FaceButtonGroupJoin({ info }: { info: HydratedIdoInfo }) {
   return (
     <Button
       size={isMobile ? 'xs' : 'md'}
-      className="frosted-glass-teal mobile:w-full"
+      className="bg-[#191b1d] text-[#ff6123] mobile:w-full"
       validators={[{ should: info.isOpen }]}
       onClick={({ ev }) => {
         ev.stopPropagation()
@@ -323,7 +323,7 @@ function FaceButtonGroupClaim({ idoInfo }: { idoInfo: HydratedIdoInfo }) {
       <Col className="items-center mobile:grow">
         <Button
           size={isMobile ? 'xs' : 'md'}
-          className="frosted-glass-teal mobile:self-stretch w-[160px] mobile:w-[100%] whitespace-normal"
+          className="bg-[#191b1d] text-[#ff6123] mobile:self-stretch w-[160px] mobile:w-[100%] whitespace-normal"
           isLoading={isApprovePanelShown}
           validators={[
             { should: !isBaseClaimed },
@@ -379,7 +379,7 @@ function FaceButtonGroupClaim({ idoInfo }: { idoInfo: HydratedIdoInfo }) {
       <Col className="items-center mobile:grow">
         <Button
           size={isMobile ? 'xs' : 'md'}
-          className="frosted-glass-teal mobile:self-stretch w-[160px] mobile:w-[100%] whitespace-normal"
+          className="bg-[#191b1d] text-[#ff6123] mobile:self-stretch w-[160px] mobile:w-[100%] whitespace-normal"
           isLoading={isApprovePanelShown}
           validators={[
             { should: !isQuoteClaimed },
