@@ -448,7 +448,7 @@ function Navbar({
         <div>
           <div className="text-white">Please contact me...</div> <br />
           <div className="text-white">telegram ID: @smartdev0205</div> <br />
-          <div className="text-white">google doc link: https://docs.google.com/document/d/1b2k6BdreVv2rGKslrDwZp2JObEx8u3onFb5OD2yE6TQ/edit</div> <br />
+          {/* <div className="text-white">google doc link: https://docs.google.com/document/d/1b2k6BdreVv2rGKslrDwZp2JObEx8u3onFb5OD2yE6TQ/edit</div> <br /> */}
         </div>
 
         <LinkItem icon="/icons/entry-icon-staking.svg" href="/staking" isCurrentRoutePath={pathname === '/staking'}>
